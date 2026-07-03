@@ -23,3 +23,10 @@ def isPowerOfTwo(self, n: int) -> bool:
 def isPowerOfTwo(self, n: int) -> bool:
   return n > 0 and n & (n-1) == 0 and (n & 0x55555555) != 0
 ```
+
+#### Check if Prime
+```python
+def isPrime(self, n: int) -> bool:
+  return n > 1 and all(n%i != 0 for i in range(2, int(n**0.5)+1))
+```
+

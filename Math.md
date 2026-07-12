@@ -1,9 +1,9 @@
 ## Index
-- [Reverse Integers](#reverse-integers)
-- [Check if Power of 2](#Check-if-Power-of-2)
-- [Check if Power of 3](#Check-if-Power-of-3)
-- [Check if Power of 4](#Check-if-Power-of-4)
-- [Check if Prime](#Check-if-Prime)
+1. [Reverse Integers](#reverse-integers)
+2. [Check if Power of 2](#Check-if-Power-of-2)
+3. [Check if Power of 3](#Check-if-Power-of-3)
+4. [Check if Power of 4](#Check-if-Power-of-4)
+5. [Check if Prime](#Check-if-Prime)
 
 ---
 

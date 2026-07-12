@@ -11,6 +11,53 @@
 
 ---
 
+## Notes
+
+### Adjacency List vs Adjacency Matrix
+#### 1. Adjacency List
+
+Structure
+
+```python
+adj = [
+    [1, 2],      # neighbors of node 0
+    [0, 3],      # neighbors of node 1
+    [0],         # neighbors of node 2
+    [1]
+]
+```
+
+Traversal
+
+```python
+for nei in adj[node]:
+    # nei is the neighbor node
+```
+
+---
+
+#### 2. Adjacency Matrix
+
+Structure
+
+```python
+matrix = [
+    [1,1,0],
+    [1,1,1],
+    [0,1,1]
+]
+```
+
+Traversal
+
+```python
+for nei in range(n):
+    if matrix[node][nei]:
+        # nei is the neighbor node
+```
+
+---
+
 ## Build Undirected Graph
 
 ```python

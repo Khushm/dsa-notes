@@ -1,13 +1,13 @@
 ## Index: Graph
 
-- [Build Undirected Graph](#build-undirected-graph)
-- [Build Directed Graph](#build-directed-graph)
-- [Build Weighted Undirected Graph](#build-weighted-undirected-graph)
-- [Build Weighted Directed Graph](#build-weighted-directed-graph)
-- [Generic BFS](#generic-bfs)
-- [BFS for All Components](#bfs-for-all-components)
-- [Generic DFS](#generic-dfs)
-- [DFS for All Components](#dfs-for-all-components)
+1. [Build Undirected Graph](#build-undirected-graph)
+2. [Build Directed Graph](#build-directed-graph)
+3. [Build Weighted Undirected Graph](#build-weighted-undirected-graph)
+4. [Build Weighted Directed Graph](#build-weighted-directed-graph)
+5. [Generic BFS](#generic-bfs)
+6. [BFS for All Components](#bfs-for-all-components)
+7. [Generic DFS](#generic-dfs)
+8. [DFS for All Components](#dfs-for-all-components)
 
 ---
 

@@ -1,0 +1,38 @@
+## Index
+- [Reverse Integers](#reverse-integers)
+- [Check if Power of 2](#Check-if-Power-of-2)
+- [Check if Power of 3](#Check-if-Power-of-3)
+- [Check if Power of 4](#Check-if-Power-of-4)
+- [Check if Prime](#Check-if-Prime)
+
+---
+
+## Reverse Integers
+```python
+def reverse(self, n):
+  return int(str(n)[::-1])
+```
+
+## Check if Power of 2
+```python
+def isPowerOfTwo(self, n: int) -> bool:
+  return n >0 and (n&n-1) == 0
+```
+
+## Check if Power of 3
+```python
+def isPowerOfTwo(self, n: int) -> bool:
+  return n > 0 and 1162261467%n == 0
+```
+
+## Check if Power of 4
+```python
+def isPowerOfTwo(self, n: int) -> bool:
+  return n > 0 and n & (n-1) == 0 and (n & 0x55555555) != 0
+```
+
+## Check if Prime
+```python
+def isPrime(self, n: int) -> bool:
+  return n > 1 and all(n%i != 0 for i in range(2, int(n**0.5)+1))
+```

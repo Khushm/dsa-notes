@@ -30,3 +30,75 @@ def isPrime(self, n: int) -> bool:
   return n > 1 and all(n%i != 0 for i in range(2, int(n**0.5)+1))
 ```
 
+#### Graph: BFS Traversal (Connected graph)
+```
+from collections import deque
+def bfs(adj):
+  n = len(adj)
+  queue = deque([0])
+  visited = [False] * n
+  visited[0] = True
+
+  ans = []
+  
+  while queue:
+    node = queue.popleft()
+    ans.append(node)
+
+    for nei in adj[node]:
+      if not visited[nei]:
+          visited[nei] = True
+          queue.append(nei)
+  
+  return ans
+```
+
+#### Graph: BFS Traversal (Disconnected graph)
+```
+from collections import deque
+
+def bfs_all(adj):
+  n = len(adj)
+  visited = [False] * n
+  ans = []
+
+  for start in range(n):
+    if visited[start]:
+        continue
+  
+    queue = deque([start])
+    visited[start] = True
+  
+    while queue:
+      node = queue.popleft()
+      ans.append(node)
+  
+      for nei in adj[node]:
+        if not visited[nei]:
+            visited[nei] = True
+            queue.append(nei)
+  
+  return ans
+```
+
+#### Graph: Generic BFS Traversal (for any start node)
+```
+from collections import deque
+def bfs(start, adj):
+  n = len(adj)
+  queue = deque([start])
+  visited = [False] * n
+  visited[start] = True
+
+  ans = []
+  
+  while queue:
+    node = queue.popleft()
+    ans.append(node)
+    for nei in adj[node]:
+        if not visited[nei]:
+            visited[nei] = True
+            queue.append(nei)
+
+  return ans
+```

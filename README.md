@@ -31,7 +31,7 @@ def isPrime(self, n: int) -> bool:
 ```
 
 #### Graph: BFS Traversal (Connected graph)
-```
+```python
 from collections import deque
 def bfs(adj):
   n = len(adj)
@@ -54,7 +54,7 @@ def bfs(adj):
 ```
 
 #### Graph: BFS Traversal (Disconnected graph)
-```
+```python
 from collections import deque
 
 def bfs_all(adj):
@@ -82,7 +82,7 @@ def bfs_all(adj):
 ```
 
 #### Graph: Generic BFS Traversal (for any start node)
-```
+```python
 from collections import deque
 def bfs(start, adj):
   n = len(adj)

@@ -1,0 +1,192 @@
+## Index: Graph
+
+- [Build Undirected Graph](#build-undirected-graph)
+- [Build Directed Graph](#build-directed-graph)
+- [Build Weighted Undirected Graph](#build-weighted-undirected-graph)
+- [Build Weighted Directed Graph](#build-weighted-directed-graph)
+- [Generic BFS](#generic-bfs)
+- [BFS for All Components](#bfs-for-all-components)
+- [Generic DFS](#generic-dfs)
+- [DFS for All Components](#dfs-for-all-components)
+
+---
+
+## Build Undirected Graph
+
+```python
+def build_undirected_graph(n, edges):
+    adj = [[] for _ in range(n)]
+
+    for u, v in edges:
+        adj[u].append(v)
+        adj[v].append(u)
+
+    return adj
+```
+
+---
+
+## Build Directed Graph
+
+```python
+def build_directed_graph(n, edges):
+    adj = [[] for _ in range(n)]
+
+    for u, v in edges:
+        adj[u].append(v)
+
+    return adj
+```
+
+---
+
+## Build Weighted Undirected Graph
+
+```python
+def build_weighted_undirected_graph(n, edges):
+    adj = [[] for _ in range(n)]
+
+    for u, v, w in edges:
+        adj[u].append((v, w))
+        adj[v].append((u, w))
+
+    return adj
+```
+
+---
+
+## Build Weighted Directed Graph
+
+```python
+def build_weighted_directed_graph(n, edges):
+    adj = [[] for _ in range(n)]
+
+    for u, v, w in edges:
+        adj[u].append((v, w))
+
+    return adj
+```
+
+---
+
+## Generic BFS
+
+```python
+from collections import deque
+
+def bfs(start, adj):
+    n = len(adj)
+
+    visited = [False] * n
+    visited[start] = True
+
+    queue = deque([start])
+
+    order = []
+
+    while queue:
+        node = queue.popleft()
+        order.append(node)
+
+        for nei in adj[node]:
+            if not visited[nei]:
+                visited[nei] = True
+                queue.append(nei)
+
+    return order
+```
+
+---
+
+## BFS for All Components
+
+```python
+from collections import deque
+
+def bfs_all(adj):
+    n = len(adj)
+
+    visited = [False] * n
+
+    components = []
+
+    for start in range(n):
+
+        if visited[start]:
+            continue
+
+        queue = deque([start])
+        visited[start] = True
+
+        component = []
+
+        while queue:
+
+            node = queue.popleft()
+            component.append(node)
+
+            for nei in adj[node]:
+
+                if not visited[nei]:
+                    visited[nei] = True
+                    queue.append(nei)
+
+        components.append(component)
+
+    return components
+```
+
+---
+
+## Generic DFS
+
+```python
+def dfs(start, adj):
+    n = len(adj)
+
+    visited = [False] * n
+
+    order = []
+
+    def helper(node):
+        visited[node] = True
+        order.append(node)
+
+        for nei in adj[node]:
+            if not visited[nei]:
+                helper(nei)
+
+    helper(start)
+
+    return order
+```
+
+---
+
+## DFS for All Components
+
+```python
+def dfs_all(adj):
+    n = len(adj)
+
+    visited = [False] * n
+
+    components = []
+
+    def helper(node):
+        visited[node] = True
+        component.append(node)
+
+        for nei in adj[node]:
+            if not visited[nei]:
+                helper(nei)
+
+    for i in range(n):
+
+        if not visited[i]:
+            component = []
+            helper(i)
+            components.append(component)
+
+    return components
+```

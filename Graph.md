@@ -8,6 +8,8 @@
 6. [BFS for All Components](#bfs-for-all-components)
 7. [Generic DFS](#generic-dfs)
 8. [DFS for All Components](#dfs-for-all-components)
+9. Note: [Adjacency List vs Adjacency Matrix Traversal](#adjacency-list-vs-adjacency-matrix)
+
 
 ---
 

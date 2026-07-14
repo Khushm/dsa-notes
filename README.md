@@ -14,3 +14,4 @@
 - [Check if Power of 3](./Math.md#Check-if-Power-of-3)
 - [Check if Power of 4](./Math.md#Check-if-Power-of-4)
 - [Check if Prime](./Math.md#Check-if-Prime)
+- [GCD](./Math.md#GCD)

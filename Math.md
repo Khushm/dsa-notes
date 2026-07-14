@@ -4,6 +4,7 @@
 3. [Check if Power of 3](#Check-if-Power-of-3)
 4. [Check if Power of 4](#Check-if-Power-of-4)
 5. [Check if Prime](#Check-if-Prime)
+6. [GCD](#GCD)
 
 ---
 
@@ -35,4 +36,13 @@ def isPowerOfTwo(self, n: int) -> bool:
 ```python
 def isPrime(self, n: int) -> bool:
   return n > 1 and all(n%i != 0 for i in range(2, int(n**0.5)+1))
+```
+
+## GCD
+```python
+# Euclidean Algorithm (Recursive)
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
 ```
